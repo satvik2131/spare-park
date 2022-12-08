@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SparePark</string>
+    <string name="title_activity_owner_map">OwnerMap</string>
 </resources>
