@@ -1,4 +1,4 @@
-package com.example.sparepark;
+package com.example.sparespark;
 
 import org.junit.Test;
 

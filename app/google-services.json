@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "105099567086",
+    "project_id": "spare-spark",
+    "storage_bucket": "spare-spark.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105099567086:android:230e3c39a634103566f8ff",
+        "android_client_info": {
+          "package_name": "com.example.sparepark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105099567086-bonvb3uosvuiruo52blvkaq9hk238lpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBFppI_MHciSssZ1CK8P6K4WHY4OM1dxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105099567086-bonvb3uosvuiruo52blvkaq9hk238lpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105099567086:android:49501471df47d46e66f8ff",
+        "android_client_info": {
+          "package_name": "com.example.sparespark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105099567086-bonvb3uosvuiruo52blvkaq9hk238lpp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBFppI_MHciSssZ1CK8P6K4WHY4OM1dxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105099567086-bonvb3uosvuiruo52blvkaq9hk238lpp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

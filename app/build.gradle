@@ -1,5 +1,7 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.dagger.hilt.android'
+    id 'com.google.gms.google-services'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 
 }
@@ -29,8 +31,25 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
-        viewBinding true
+        dataBinding = true
+        viewBinding = true
     }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    //Parking Owner
+                    'src/main/res/layouts/parking_owner',
+                    'src/main/res/layouts/admin',
+                    'src/main/res/layouts/user',
+
+
+                    'src/main/res/layouts',
+                    'src/main/res'
+            ]
+        }
+    }
+
 }
 
 dependencies {
@@ -42,4 +61,30 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    //Location services
+    implementation "com.google.android.gms:play-services-location:15.0.1"
+
+
+    //Firebase
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+
+    //Database
+    implementation 'com.google.firebase:firebase-database'
+
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:8.0.2'
+
+    //Firebase Auth UI
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
+    //Dependency Injection
+    implementation "com.google.dagger:hilt-android:2.44"
+    annotationProcessor("com.google.dagger:hilt-compiler:2.44")
+
 }

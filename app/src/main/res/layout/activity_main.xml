@@ -6,13 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Your User Role"
+            android:textSize="30sp"
+            android:fontFamily="@font/gotham"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/gotham"
+            android:onClick="moveToOwner"
+            android:text="Owner" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:fontFamily="@font/gotham"
+            android:onClick="moveToUser"
+            android:text="User" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40sp"
+            android:fontFamily="@font/gotham"
+            android:onClick="moveToAdmin"
+            android:text="Admin" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
