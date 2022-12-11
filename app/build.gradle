@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.sparepark'
+    namespace 'com.example.sparespark'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.sparepark"
+        applicationId "com.example.sparespark"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -40,10 +40,12 @@ android {
             res.srcDirs = [
                     //Parking Owner
                     'src/main/res/layouts/parking_owner',
+
+                    //Admin
                     'src/main/res/layouts/admin',
+
+                    //User
                     'src/main/res/layouts/user',
-
-
                     'src/main/res/layouts',
                     'src/main/res'
             ]

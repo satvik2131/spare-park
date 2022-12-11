@@ -15,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sparespark.model.AllUserRoleModel;
 import com.example.sparespark.utils.SharedPreferencesHelper;
+import com.example.sparespark.view.admin.AdminHome;
+import com.example.sparespark.view.user.UserHome;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
 import com.firebase.ui.auth.IdpResponse;
@@ -70,11 +72,25 @@ public class PhoneAuth extends AppCompatActivity {
             //GETTING USER_ROLE
             String user_role = SharedPreferencesHelper.getUserRole(this);
 
+            //Setting Current client uid
             SharedPreferencesHelper.setCurrentUid(this , uid);
+            //New data
             AllUserRoleModel newUser = new AllUserRoleModel(name , user.getPhoneNumber() , uid);
             //NEW user added
             reference.child(user_role).child(uid).setValue(newUser);
-            //....Remaining -- write redirection code
+
+
+            //User and Owner gateway redirection
+            if(user_role.isEmpty()!=true){
+                switch (user_role) {
+                    case "Owner":
+                        startActivity(new Intent(this, OwnerHome.class));
+                        break;
+                    case "User":
+                        startActivity(new Intent(this, UserHome.class));
+                        break;
+                }
+            }
 
         } else {
             Toast.makeText(this, response.getError().getMessage(), Toast.LENGTH_SHORT).show();

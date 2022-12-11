@@ -1,16 +1,15 @@
 package com.example.sparespark;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.sparepark.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.sparespark.utils.SharedPreferencesHelper;
 import com.example.sparespark.view.admin.AdminHome;
 import com.example.sparespark.view.admin.AdminLogin;
-import com.example.sparespark.view.parking_owner.OwnerMap;
+import com.example.sparespark.view.parking_owner.OwnerHome;
 import com.example.sparespark.view.parking_owner.PhoneAuth;
 import com.example.sparespark.view.user.UserHome;
 
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         if(user_role.isEmpty()!=true && uid.isEmpty()!=true){
             switch (user_role) {
                 case "Owner":
-                    startActivity(new Intent(this, OwnerMap.class));
+                    startActivity(new Intent(this, OwnerHome.class));
                     break;
                 case "User":
                     startActivity(new Intent(this, UserHome.class));

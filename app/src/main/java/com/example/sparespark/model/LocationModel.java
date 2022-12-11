@@ -9,10 +9,14 @@ public class LocationModel {
     double latitude;
     double longitude;
     boolean status ;
+    String uid;
+
+
 
     public LocationModel(String tenant_name , String address,
                          String phoneno, String timing ,
-                         double latitude , double longitude
+                         double latitude , double longitude,
+                         String uid
     ){
         this.tenant_name = tenant_name;
         this.address = address;
@@ -20,11 +24,21 @@ public class LocationModel {
         this.timing = timing;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.uid = uid;
         this.status = false;
     }
 
 
     //Getter Setter
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
 
     public boolean isStatus() {
         return status;
