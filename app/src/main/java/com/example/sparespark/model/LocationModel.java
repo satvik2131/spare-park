@@ -1,5 +1,10 @@
 package com.example.sparespark.model;
 
+import android.content.Context;
+import android.location.Location;
+
+import com.example.sparespark.utils.SharedPreferencesHelper;
+
 public class LocationModel {
 
     String tenant_name;
@@ -10,13 +15,21 @@ public class LocationModel {
     double longitude;
     boolean status ;
     String uid;
+    //Location request id
+    String lrid;
 
+
+
+    public LocationModel(){
+
+    }
 
 
     public LocationModel(String tenant_name , String address,
                          String phoneno, String timing ,
                          double latitude , double longitude,
-                         String uid
+                         String uid,
+                         String lrid, boolean status
     ){
         this.tenant_name = tenant_name;
         this.address = address;
@@ -25,11 +38,24 @@ public class LocationModel {
         this.latitude = latitude;
         this.longitude = longitude;
         this.uid = uid;
-        this.status = false;
+        this.lrid = lrid;
+        this.status = status;
+
     }
 
 
     //Getter Setter
+
+
+    public String getLrid() {
+        return lrid;
+    }
+
+    public void setLrid(String lrid) {
+        this.lrid = lrid;
+    }
+
+
 
     public String getUid() {
         return uid;

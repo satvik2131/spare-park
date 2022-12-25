@@ -1,0 +1,5 @@
+<resources>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_test_maps">testMaps</string>
+    <string name="title_activity_map_owner_test">MapOwnerTest</string>
+</resources>

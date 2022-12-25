@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_item_1"
+        android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home" />
     <item
-        android:id="@+id/menu_item_2"
+        android:id="@+id/req_location"
         android:icon="@drawable/requested_location"
         android:title="Requested Location" />
+
     <item
-        android:id="@+id/menu_item_3"
+        android:id="@+id/user_requests"
+        android:icon="@drawable/insert_request_location"
+        android:title="Requests" />
+    <item
+        android:id="@+id/logout"
         android:icon="@drawable/logout"
         android:title="Logout" />
 </menu>

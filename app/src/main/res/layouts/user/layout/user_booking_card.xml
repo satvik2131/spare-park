@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="locationRequest"
+            type="com.example.sparespark.model.UserBookRequest" />
+
+
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/information_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:layout_marginHorizontal="40sp"
+        android:orientation="vertical"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="4dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity=""
+            android:orientation="vertical">
+
+            <!--        Tenant Name -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/calibri"
+                android:text="Tenant Name" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:backgroundTint="@color/teal_200">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/selected_sports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="05sp"
+                    android:fontFamily="@font/gotham"
+                    android:text="@{locationRequest.tenant_name}" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--        Phone Number-->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/calibri"
+                android:text="Phone Number" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:backgroundTint="@color/teal_200">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dateofslot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="05sp"
+                    android:fontFamily="@font/gotham"
+                    android:text="@{locationRequest.tenant_phoneno}" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--        Selected Time-->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/calibri"
+                android:text="Selected Time" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:backgroundTint="@color/teal_200">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/timeofslot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="05sp"
+                    android:fontFamily="@font/gotham"
+                    android:text="@{locationRequest.timing}" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--        Status-->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/calibri"
+                android:text="Status" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:backgroundTint="@color/teal_200">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/user_request_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="05sp"
+                    android:fontFamily="@font/gotham"
+                    android:text="@{locationRequest.status? `Accepted` : `Waiting` }" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <!--        Address-->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/calibri"
+                android:text="Address" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginBottom="20sp"
+                android:backgroundTint="@color/teal_200">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/durationofslot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="05sp"
+                    android:fontFamily="@font/gotham"
+                    android:text="@{locationRequest.tenant_address}" />
+
+
+                <!--                these buttons will only appear if the role is admin-->
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

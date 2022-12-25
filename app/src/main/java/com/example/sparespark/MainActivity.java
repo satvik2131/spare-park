@@ -13,6 +13,8 @@ import com.example.sparespark.view.parking_owner.OwnerHome;
 import com.example.sparespark.view.parking_owner.PhoneAuth;
 import com.example.sparespark.view.user.UserHome;
 
+import java.security.acl.Owner;
+
 import dagger.hilt.android.AndroidEntryPoint;
 
 
@@ -35,12 +37,15 @@ public class MainActivity extends AppCompatActivity {
             switch (user_role) {
                 case "Owner":
                     startActivity(new Intent(this, OwnerHome.class));
+                    finish();
                     break;
                 case "User":
                     startActivity(new Intent(this, UserHome.class));
+                    finish();
                     break;
                 case "Admin":
                     startActivity(new Intent(this, AdminHome.class));
+                    finish();
                     break;
             }
         }

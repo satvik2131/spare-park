@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/add_location"
+        android:title="Approve/Delete" />
+    <item
+        android:id="@+id/req_location"
+        android:icon="@drawable/update_location"
+        android:title="Update" />
+    <item
+        android:id="@+id/insert_custom"
+        android:icon="@drawable/insert_request_location"
+        android:title="Insert Custom" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="Logout" />
+
+</menu>

@@ -12,36 +12,13 @@
         android:id="@+id/owner_home_frag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/selectTV"
+        android:layout_marginBottom="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/owner_bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/refresh_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/purple_500"
-        android:contentDescription="Refresh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_refresh_24" />
 
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/selectTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/gotham"
-        android:padding="20sp"
-        android:text="Tap anywhere to add location"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/owner_bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/owner_bottom_nav"
