@@ -9,4 +9,8 @@ Spare-Park is a native Java application that allows users to find available park
 
 [Download the App](https://drive.google.com/file/d/1qOuksWR8Ghi4b7-N-2Td47ldmXF5ugh6/view)
 
+# Admin Credentials 
+username - admin
+password - test123
+
 Happy Parking! 🚙💨
